@@ -6,7 +6,6 @@ Created on Sat Sep 14 13:14:38 2019
 @author: isabellequaye
 """
 
-draw_letter = {}
 def straight_bar():
     return "U2D4U2"
 
@@ -35,6 +34,13 @@ def up_down(x,y):
 def down_up(x,y):
     return "D"+ str(x) + "U" + str(y)
 
+def display_commands(inp):
+    out = []
+    for i in inp.upper():
+        out += [draw_letter[i][j:j+2] for j in range(0, len(draw_letter[i])-2,2)]
+    return out
+
+draw_letter = {" ": right_bar() + right_bar(), "A": upsidedownL_shell() + right_bar() + straight_bar(), "B": C_shell() + right_bar() + straight_bar(), "C": C_shell(), "D": "D2" + left_bar() + "U2" + right_bar() + "U2D2", "E": C_shell() + right_bar(), "F": upsidedownL_shell() + right_bar(), "G": C_shell() + "D2" + right_bar() + "U2L1R1D2" + left_bar() + "U2", "H": straight_bar() + right_bar() + straight_bar(), "I": straight_bar(), "J": "D2" + right_bar() + "U4D2", "K": straight_bar() + "R1U2D2R1D2U2" + left_bar(), "L": L_shell(), "M": straight_bar() + "U2" + right_bar() + "D3U3" + right_bar() + "D4U2"}
 draw_letter["N"] = straight_bar() +  "U2" + right_bar() + "D4U2"
 draw_letter["O"] = draw_letter["N"] + "D2"+ back_forth() + "U2"
 draw_letter["P"] = upsidedownL_shell() + right_bar() + "U2" + "D2"
@@ -49,5 +55,4 @@ draw_letter["X"] = right_bar() + down_up(2,2) + left_bar() + up_down(2,2) + righ
 draw_letter["Y"] = up_down(2,2) + right_bar() + up_down(2,4) + "U2"
 draw_letter["Z"] = right_bar() + "U2" + back_forth() + "D2" + left_bar() + "D2" + forth_back() + "U2R2"
 
-
-
+print(display_commands("yeet"))
