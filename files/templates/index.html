@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Simple WebAudioRecorder.js demo</title>
+
+<head>
+	<meta charset="UTF-8">
+	<title>JAMI</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Sarpanch&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/style.css?<?=filemtime('style.css')?>">
-  </head>
-  <body>
-	<img src="/static/images/jami.png" alt = "jami logo"/>
-  	<p>Convert recorded audio to:<br>
-	<select id="encodingTypeSelect">
-	  <!-- <option value="wav">Waveform Audio (.wav)</option> -->
-	  <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
-	  <!-- <option value="ogg">Ogg Vorbis (.ogg)</option> -->
-	</select>
+	<link rel="stylesheet" type="text/css" href="/static/style.css?<?=filemtime('style.css')?>">
+</head>
+
+<body>
+	<img src="/static/images/jami.png" alt="jami logo" />
+	<p>Convert recorded audio to:<br>
+		<select id="encodingTypeSelect">
+			<option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
+		</select>
 	</p>
 	<div id="controls">
 		<button id="recordButton">Record</button>
@@ -26,11 +26,12 @@
 
 	<h3>Recordings</h3>
 	<ol id="recordingsList"></ol>
-  
-  	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="/static/js/WebAudioRecorder.min.js"></script>
-			<script src="/static/js/app.js"></script>
 
-  </body>
+	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="/static/js/WebAudioRecorder.min.js"></script>
+	<script src="/static/js/app.js"></script>
+
+</body>
+
 </html>
