@@ -1,13 +1,13 @@
 from rev_ai import apiclient
 import time
 
+accesscode = "022klht4it8TKsuK-Wh0YnLjGO1FHjAkHSw1kJoOGQ0xoFnGenH69BrgvJOS0J2bnr-iDqKL_Fyot_WfPuEyXS718p6p4"
 
-def transform (recording): 
-    client = apiclient.RevAiAPIClient("022klht4it8TKsuK-Wh0YnLjGO1FHjAkHSw1kJoOGQ0xoFnGenH69BrgvJOS0J2bnr-iDqKL_Fyot_WfPuEyXS718p6p4")
+def transform (recording_path): 
+    client = apiclient.RevAiAPIClient(accesscode)
 
-    # recording = "C:/Users/Amanda/Downloads/test1.mp3"
     # you can send a local file
-    job = client.submit_job_local_file(recording)
+    job = client.submit_job_local_file(recording_path)
 
     # as text
     # transcript_text = client.get_transcript_text(job.id)
@@ -49,7 +49,4 @@ def transform (recording):
             captions = client.get_captions(job.id)
 
             break
-# job_details = client.get_job_details(job.id)
-
-# print(job_details.status)
 

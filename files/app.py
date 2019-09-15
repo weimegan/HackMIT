@@ -12,11 +12,12 @@ def index():
 
 @app.route('/trans', methods=['POST'])
 def trans():
-    # data = request.get_json(force=True)
-    data = request
-    # print(request)
-    transform(data)
-    return "data"
+    file = request.files['file']
+    # Change to whatever path you want to save the recording to
+    file_path = "/Users/Amanda/Downloads/audio.mp3"
+    file.save(file_path)
+    transform(file_path)
+    return file_path
     
 
 if __name__ == '__main__':

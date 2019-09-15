@@ -80,10 +80,22 @@ function startRecording() {
 		recorder.onComplete = function(recorder, blob) { 
 			__log("Encoding complete");
 			createDownloadLink(blob,recorder.encoding);
-			__log("made it this far");
-			$.post('trans', recorder.encoding);
-			__log("fingers crossed");
-			// encodingTypeSelect.disabled = false;
+			var formData = new FormData();
+			formData.append("file", blob, "recording.mp3");
+			$.ajax({
+				url: "trans",
+				type: 'POST',
+
+				// Form data
+				data: formData,
+
+				// Tell jQuery not to process data or worry about content-type
+				// You *must* include these options!
+				cache: false,
+				contentType: false,
+				processData: false,
+			})
+			encodingTypeSelect.disabled = false;
 		}
 
 		recorder.setOptions({
@@ -149,7 +161,6 @@ function createDownloadLink(blob,encoding) {
 	//add the li element to the ordered list
 	recordingsList.appendChild(li);
 }
-
 
 
 //helper function
