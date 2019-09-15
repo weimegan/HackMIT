@@ -80,10 +80,13 @@ function startRecording() {
 		recorder.onComplete = function(recorder, blob) { 
 			__log("Encoding complete");
 			createDownloadLink(blob,recorder.encoding);
+
+			// Create formData containing blob to pass the file
+			// to the server from client
 			var formData = new FormData();
 			formData.append("file", blob, "recording.mp3");
 			$.ajax({
-				url: "trans",
+				url: "transcribe",
 				type: 'POST',
 
 				// Form data
