@@ -181,10 +181,9 @@ void rotate(int distance, int backorforw) {
 }
 
 char pyin = ' ';
-
 void loop() {
-  //Process p;
-  //p.begin("convertlettertocommand.py");
+  Process p;
+  p.begin("/test/convertlettertocommand.py");
 
   if (Serial.available()) {
       pyin = Serial.read();

@@ -58,6 +58,6 @@ draw_letter["Y"] = up_down(2,2) + right_bar() + up_down(2,4) + "U2"
 draw_letter["Z"] = right_bar() + "U2" + back_forth() + "D2" + left_bar() + "D2" + forth_back() + "U2R2"
 
 print(ser.name)
-//ser.write(display_commands("IQ"))
-ser.write("Hi")
+#ser.write(display_commands("IQ"))
+ser.write('H')
 ser.close()
