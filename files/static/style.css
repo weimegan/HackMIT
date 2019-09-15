@@ -17,7 +17,7 @@ a:visited {
 body {
   margin: 1rem;
   padding: 1rem;
-  font-family: sans-serif;
+  font-family: 'Sarpanch', sans-serif;
   max-width: 28rem;
   margin: 0 auto;
   position: relative;
@@ -45,7 +45,7 @@ button {
 }
 button:hover, button:focus {
   outline: none;
-  background: #c72d1c;
+  background: #552121;
 }
 button::-moz-focus-inner {
   border: 0;
