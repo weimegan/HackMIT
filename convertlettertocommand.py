@@ -1,3 +1,4 @@
+import serial
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -5,6 +6,7 @@ Created on Sat Sep 14 13:14:38 2019
 
 @author: isabellequaye
 """
+ser = serial.Serial('/dev/ttyACM0', 9600)
 
 def straight_bar():
     return "U2D4U2"
@@ -55,3 +57,7 @@ draw_letter["X"] = right_bar() + down_up(2,2) + left_bar() + up_down(2,2) + righ
 draw_letter["Y"] = up_down(2,2) + right_bar() + up_down(2,4) + "U2"
 draw_letter["Z"] = right_bar() + "U2" + back_forth() + "D2" + left_bar() + "D2" + forth_back() + "U2R2"
 
+print(ser.name)
+//ser.write(display_commands("IQ"))
+ser.write("Hi")
+ser.close()
