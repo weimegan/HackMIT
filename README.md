@@ -3,10 +3,10 @@
 ![Jami](https://github.com/weimegan/HackMIT/blob/master/jami.png)
 
 ## Team Members
-Johnattan Ontiveros
-Amanda Fernandez
-Megan Wei
-Isabelle Quaye
+[Johnattan Ontiveros](https://github.com/JohnOnt)
+[Amanda Fernandez](https://github.com/amandaf1729)
+[Megan Wei](https://github.com/weimegan)
+[Isabelle Quaye](https://github.com/isabellequaye)
 
 ## Problem Statement
 How might we help young children struggling with dysgraphia and other writing disabilities improve their handwriting?
